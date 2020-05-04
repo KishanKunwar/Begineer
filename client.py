@@ -1,7 +1,9 @@
 
 import socket
 
+
 c = socket.socket()
+print("socket is created for client")
 
 
 #if doesnt know the hostname or addr
