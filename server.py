@@ -1,19 +1,19 @@
 
 import socket
 
-s = socket.socket()
-print(" A server is created")
+s= socket.socket()
 
 s.bind(("localhost",9999))
 
 s.listen(5)
-print("socket is listening")
+print("socket is listening ")
 
 while True:
 
-    c,addr = s.accept()
-    print("conncetion establish")
+    c,adrr = s.accept()
+    print("sever and client is connected ")
+    print(adrr)
 
-    s.send("hello , welcome to the server")
+    c.send(bytes("thank you for requesting to the server ","utf-8"))
 
-    s.close()
+    c.close()
